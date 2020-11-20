@@ -76,13 +76,13 @@ open class GrowingNotificationBanner: BaseNotificationBanner {
                     actualBannerHeight = topOffset + size.height + verticalSpacing
                     containerView.addSubview(customView)
 
-                    customView.snp.makeConstraints { (make) in
+                    customView.snp.makeConstraints { make in
                         if bannerPosition == .top {
                             make.top.equalTo(containerView)
                         } else {
                             make.bottom.equalTo(containerView)
                         }
-                        make.top.left.right.equalTo(containerView)
+                        make.left.right.equalTo(containerView)
                     }
                 }
                 
